@@ -86,4 +86,16 @@ const vacinar = pet => {
     };
 };
 
-module.exports = {listarPets, adicionarPet, buscarPet, pagar, darBanho, cortarUnhas, tosar, validarDados, vacinar};
+const contarVacinados = () => {
+    return [pets.filter(pet => pet.vacinado).length, pets.filter(pet => !pet.vacinado).length];
+};
+
+const campanhaVacina = () => {
+    let naoVacinados = 0;
+    for(let pet of pets){
+        (!pet.vacinado) ? (naoVacinados++, vacinar(pet)):"";
+    };
+    return naoVacinados;
+};
+
+module.exports = {listarPets, adicionarPet, buscarPet, pagar, darBanho, cortarUnhas, tosar, validarDados, vacinar, contarVacinados, campanhaVacina};

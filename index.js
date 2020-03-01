@@ -107,6 +107,14 @@ const server = http
                     res.write("Ops, nenhum pet cadastrado com esse nome!");
                 }
                 break;
+            case "/pets/vacinados":
+                let vacinados = petshop.contarVacinados();
+                res.write(` Foram encontrados ${vacinados[1]} pets não vacinados\n Foram encontrados ${vacinados[0]} pets vacinados`);
+                break;
+            case "/pets/campanhaVacina":
+                let naoVacinados = petshop.campanhaVacina();
+                res.write(`${naoVacinados} pets foram vacinados nessa campanha!`);
+                break;
             default:
                 res.write("404 - Página não encontrada");
         };
@@ -140,3 +148,6 @@ const server = http
 // TESTA VACINAR
 // LINK DIRETO http://localhost:3000/pets/vacinar?nome=Fred
 // VIA ATENDER http://localhost:3000/pets/atender?nome=Fred&servicos=vacinar // Pois não deixa de ser um serviço
+
+// TESTA CONTAR VACINADOS
+// http://localhost:3000/pets/vacinados
