@@ -140,6 +140,7 @@ const server = http
 // http://localhost:3000/pets/buscar?nome=Fred
 
 // TESTA ATENDER
+// http://localhost:3000/pets/atender?nome=Fred&servicos=tosar // Um serviço
 // http://localhost:3000/pets/atender?nome=Fred&servicos=tosar&servicos=darBanho&servicos=cortarUnhas
 
 // TESTA ADD

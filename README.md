@@ -9,7 +9,8 @@ TESTA BUSCAR
 http://localhost:3000/pets/buscar?nome=Fred
 
 TESTA ATENDER
-http://localhost:3000/pets/atender?nome=Fred&servicos=tosar&servicos=darBanho&servicos=cortarUnhas
+http://localhost:3000/pets/atender?nome=Fred&servicos=tosar // Um serviço
+http://localhost:3000/pets/atender?nome=Fred&servicos=tosar&servicos=darBanho&servicos=cortarUnhas // Vários serviços
 
 TESTA ADD
 http://localhost:3000/pets/add?nome=Banguela&idade=1&genero=M&tipo=gato&raca=SRD // DADOS OBRIGATÓRIOS
