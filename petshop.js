@@ -35,12 +35,8 @@ let pets = [{
 const listarPets = () => {
   let conteudo = "";
   for (let pet of pets) {
-    conteudo += `
-    -----------
-    Nome: ${pet.nome}
-    -----------`;
-  }
-
+    conteudo += `Nome: ${pet.nome}\n`;
+  };
   return conteudo;
 };
 
@@ -71,4 +67,23 @@ const pagar = () => {
     return 'Pagamento realizado com successo!';
 };
 
-module.exports = {listarPets, adicionarPet, buscarPet, pagar, darBanho, cortarUnhas, tosar};
+const validarDados = pet => {
+    return (
+        pet.nome != "" &&
+        pet.idade != "" &&
+        pet.genero != "" &&
+        pet.tipo != "" &&
+        pet.raca != "" 
+    );
+};
+
+const vacinar = pet => {
+    if(pet.vacinado){
+        return `${pet.nome} já está vacinado!`;
+    }else{
+        pet.vacinado = true;
+        return `${pet.nome} vacinado com sucesso!`;
+    };
+};
+
+module.exports = {listarPets, adicionarPet, buscarPet, pagar, darBanho, cortarUnhas, tosar, validarDados, vacinar};
