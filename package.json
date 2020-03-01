@@ -1,0 +1,24 @@
+{
+  "name": "dh-desafioNode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anicacio/dh-desafioNode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anicacio/dh-desafioNode/issues"
+  },
+  "homepage": "https://github.com/anicacio/dh-desafioNode#readme",
+  "dependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
