@@ -151,3 +151,6 @@ const server = http
 
 // TESTA CONTAR VACINADOS
 // http://localhost:3000/pets/vacinados
+
+// TESTA CAMPANHA VACINA
+// http://localhost:3000/pets/campanhaVacina
